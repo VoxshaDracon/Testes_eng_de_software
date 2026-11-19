@@ -49,7 +49,7 @@ class MeuAppTreino extends StatelessWidget {
           surface: Color(0xFF1E232A),
         ),
       ),
-      initialRoute: usuarioLogado ? '/home' : '/login',
+      initialRoute: usuarioLogado ? '/home' : '/home',
       routes: {
         '/login': (context) => const LoginScreen(),
         '/cadastro': (context) => const CadastroScreen(),

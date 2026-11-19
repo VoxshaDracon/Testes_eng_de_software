@@ -6,6 +6,7 @@ import 'leaderboard_screen.dart';
 import 'login_screen.dart';
 import 'profile_screen.dart';
 import 'training_menu_screen.dart';
+import 'Musicao.dart';
 
 class HomeScreen extends StatefulWidget {
   final VoidCallback? onSecondRoute;
@@ -410,6 +411,82 @@ class _HomeScreenState extends State<HomeScreen> {
                       Icons.arrow_forward_ios,
                       color: Color(0xFF00E676),
                       size: 24,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(height: 16),
+
+            InkWell(
+              onTap: () async {
+                                  await Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          MusicaScreen(),
+                                    ),
+                                  );
+                                },
+              borderRadius: BorderRadius.circular(24),
+              child: Container(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 10,
+                  horizontal: 8,
+                ),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 75, 0, 105),
+                  borderRadius: BorderRadius.circular(24),
+                ),
+                child: Row(
+                  children: [
+                    const Icon(
+                      Icons.roofing_outlined,
+                      size: 15,
+                      color: Color.fromARGB(255, 49, 0, 0),
+                    ),
+                    const Icon(
+                      Icons.accessible_forward_rounded,
+                      size: 15,
+                      color: Color.fromARGB(255, 3, 3, 3),
+                    ),
+                    const Icon(
+                      Icons.local_fire_department,
+                      size: 15,
+                      color: Color.fromARGB(255, 187, 45, 2),
+                    ),
+                    const SizedBox(width: 16),
+                    Container(
+                      height: 25,
+                      width: 2,
+                      color: Colors.grey.shade600,
+                    ),
+                    const SizedBox(width: 16),
+                    const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Hora de',
+                          style: TextStyle(
+                            color: Color(0xFF00E676),
+                            fontSize: 9,
+                          ),
+                        ),
+                        Text(
+                          'tocar',
+                          style: TextStyle(
+                            color: Color(0xFF00E676),
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const Spacer(),
+                    const Icon(
+                      Icons.library_music,
+                      color: Color.fromARGB(255, 52, 34, 131),
+                      size: 12,
                     ),
                   ],
                 ),
